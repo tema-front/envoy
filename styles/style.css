@@ -138,3 +138,26 @@ body {
     color: #ccc;
     margin-bottom: 12px;
 }
+
+.logos img {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    margin: 6px 12px;
+}
+
+.about {
+    max-width: 1240px;
+    display: grid;
+    margin: 0 auto 73px;
+    padding: 48px 20px 24px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    max-width: 85%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
