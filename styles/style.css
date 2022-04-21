@@ -18,6 +18,7 @@ body {
     background-repeat: no-repeat,no-repeat;
     background-position: 0 0,center -13%;
     padding: 0 0 150px 0;
+    background-color: #fbfbfb;
 }
 
 .header {
@@ -185,4 +186,218 @@ body {
     border-radius: 10px;
     transition: background-color .15s;
     cursor: pointer;
+}
+
+.about-button img {
+    margin-right: 10px;
+    max-width: 100%;
+    display: block;
+}
+
+.collector-deck-info {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 16px 82px;
+    position: relative;   
+}
+
+.collector-deck-info-title {
+    text-align: center;
+    font-size: 53px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    margin-bottom: 93px;
+    padding: 0 24px;
+}
+
+.collector-deck-feature {
+    position: relative;
+    display: flex;
+    padding: 30px 60px;
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collector-deck-feature.reversed {
+    flex-direction: row-reverse;
+}
+
+.collector-deck-feature.reversed .collector-deck-feature-content {
+    margin: 0 auto;
+}
+
+.collector-deck-feature.reversed .collector-deck-feature-star {
+    top: 30%;
+    left: 82%;
+}
+
+.collector-deck-feature-index {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.collector-deck-feature-title {
+    font-weight: 300;
+    font-size: 40px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text!important;
+    margin-bottom: 24px;
+}
+
+.collector-deck-feature:nth-child(2) > div > h3 {
+    background: -webkit-linear-gradient(0deg,#fe6975,#fea869);
+}
+
+.collector-deck-feature:nth-child(3) > div > h3 {
+    background: -webkit-linear-gradient(0deg,#486ffa,#ab48fa);
+}
+
+.collector-deck-feature:nth-child(4) > div > h3 {
+    background: -webkit-linear-gradient(0deg,#30a7ff,#30fff3);
+}
+
+
+.collector-deck-feature-description {
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: "Poppins", sans-serif;
+    max-width: 300px;
+    margin-bottom: 16px;
+}
+
+.collector-deck-feature-wrapper {
+    display: inline-flex;
+    align-items: center;
+    -webkit-text-decoration-color: #030303;
+    text-decoration-color: #030303;
+}
+
+.collector-deck-feature-wrapper-disabled {
+    pointer-events: none;
+    -webkit-text-decoration-color: #c4c4c4;
+    text-decoration-color: #c4c4c4;
+}
+
+.collector-deck-feature-wrapper-disabled .collector-deck-feature-btn {
+    background: #f3f3f3;
+}
+
+.collector-deck-feature-wrapper-disabled .collector-deck-feature-btn path {
+    stroke: #c4c4c4;
+}
+
+.collector-deck-feature-wrapper-disabled .collector-deck-feature-link {
+    color: #c4c4c4;
+}
+
+.collector-deck-feature-btn {
+    box-shadow: 0 2px 3px rgb(19 52 77 / 15%);
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: #fff;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+
+.collector-deck-feature-link {
+    color: #030303;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color .2s;
+}
+
+.collector-deck-feature-img {
+    width: 530px;
+}
+
+.collector-deck-feature-star {
+    position: absolute;
+    left: 28%;
+    top: 25%;
+}
+
+.collector-deck-info-wrapper {
+    display: flex;
+    grid-gap: 30px;
+    gap: 30px;
+}
+
+.collector-deck-info::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg,#fff 1.05%,#747474 43.92%,#fff 100.39%);
+}
+
+.collector-deck-info-subsection {
+    background: #fff;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+    width: 100%;
+}
+
+.collector-deck-info-subtitle {
+    font-weight: 300;
+    font-size: 27px;
+    margin-bottom: 24px;
+}
+
+.collector-deck-info-subsection:first-child > h4 {
+    max-width: 340px;
+}
+
+.collector-deck-info-subsection:last-child > h4 {
+    margin: 0 0 43px 0;
+}
+
+.collector-deck-info-description {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.collector-deck-info-subsection:first-child .collector-deck-info-description {
+    max-width: 340px;
+    margin: 0 0 24px 0;
+}
+
+.collector-deck-info-subsection:last-child .collector-deck-info-description {
+    padding-top: 20px;
+    max-width: 251px;
+}
+
+.collector-deck-info-subsection-wrp {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.wam {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 12px;
+    gap: 12px;
+}
+
+.wam-wrapper {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px rgb(19 52 77 / 10%);
 }
