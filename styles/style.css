@@ -161,3 +161,28 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
+
+.about-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.about-button {
+    width: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    margin: 0 auto;
+    padding: 20px 28px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    transition: background-color .15s;
+    cursor: pointer;
+}
