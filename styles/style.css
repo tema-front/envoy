@@ -126,3 +126,15 @@ body {
     left: 0;
     background: linear-gradient(90deg,#fff 1.05%,#747474 43.92%,#fff 100.39%);
 }
+
+.logos {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.logos p {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 12px;
+}
