@@ -786,3 +786,91 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
 .footer a:hover {
     opacity: .8;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero__kinesis-container[data-v-18c14fe5] {
+    padding: 0 20px;
+    width: 100%;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: grid;
+    grid-template:
+        "a . . . d" 320px
+        ". b . c ." 320px/1fr 1fr 500px 1fr 1fr;
+    max-width: 1560px;
+}
+
+.home .nft-1[data-v-18c14fe5] {
+    grid-area: a;
+    position: static!important;
+}
+
+.home .nft-2[data-v-18c14fe5] {
+    grid-area: b;
+}
+
+.home .nft-3[data-v-18c14fe5] {
+    grid-area: c;
+}
+
+.home .nft-4[data-v-18c14fe5] {
+    grid-area: d;
+}
+
+
+
+ .hero__nft {
+    max-width: 100%;
+    display: block;
+}
+/*
+.hero__nft:hover {
+    transition: all 1.5s;
+    transform: scale(120%) rotate(50deg);
+}
+
+#nft-3 > div > img:hover {
+    transition: all 1.5s;
+    transform: scale(120%) rotate(-50deg);
+}
+
+#nft-4 > div > img:hover {
+    transition: all 1.5s;
+    transform: scale(120%) rotate(-50deg);
+} */
+
+.hero__kinesis-container:hover .hero__nft {
+    transition: all 1.5s;
+    transform: rotate(35deg);
+}
+
+.hero__kinesis-container:hover #nft-2 > div > img {
+    transition: all 1.5s;
+    transform: scale(120%);
+}
+
+.hero__kinesis-container:hover #nft-3 > div > img {
+    transition: all 1.5s;
+    transform: rotate(-35deg);
+}
+
+.hero__kinesis-container:hover #nft-4 > div > img {
+    transition: all 1.5s;
+    transform: translateY(-10%);
+}
