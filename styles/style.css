@@ -463,6 +463,10 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     box-shadow: 0 4px 7px rgb(0 0 0 / 10%);
 }
 
+.collector-deck-feature-wrapper:hover .collector-deck-feature-btn path {
+    stroke: #686868;
+}
+
 .collector-deck-feature-wrapper:hover .collector-deck-feature-link {
     color: #686868;
     -webkit-text-decoration-color: #686868;
