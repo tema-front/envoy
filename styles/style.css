@@ -14,6 +14,8 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    text-rendering: optimizeSpeed;
+    line-height: 1.3;
     /* background-image: url(../img/header-gradient.svg), url(../img/header-gradient-background.svg);
     background-size: 110vw,1280px;
     background-repeat: no-repeat,no-repeat;
@@ -232,7 +234,6 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     background-size: 110vw,1280px;
     background-repeat: no-repeat,no-repeat;
     background-position: 0 0, center -1%;
-    padding: 0 0 150px 0;
     background-color: #fbfbfb;
 }
 
@@ -368,6 +369,10 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
 
 .about-button:hover {
     background-color: #686868;
+}
+
+.about-button:focus ~ .modal {
+    display: grid;
 }
 
 .about-button img {
@@ -693,6 +698,210 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     cursor: pointer;
 }
 
+.press-section {
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: transparent;
+}
+
+.e_layout {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1278px;
+}
+
+.c-press-wrapper .c-press-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1310px;
+}
+
+.c-press-wrapper .c-press-content-wrapper {
+    flex-direction: row;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-content {
+    min-width: 220px;
+    margin-right: 100px;
+}
+
+.c-press-wrapper .c-press-content-wrapper h2 {
+    font-size: 40px;
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+    line-height: 44px;
+    font-style: normal;
+    color: #000;
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.press-section h2.press-section__heading {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 52px;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-button-collection {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}
+
+.press-section__button--inactive {
+    opacity: .2;
+}
+.press-section__button {
+    box-shadow: 0 2px 3px rgb(19 52 77 / 10%);
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.press-section__button {
+    box-shadow: 0 2px 3px rgb(19 52 77 / 10%);
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items {
+    width: calc(100% - 349px);
+}
+
+.c-press-image {
+    width: 120px;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item h3, .c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 260px;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item h3 {
+    font-size: 16px;
+    margin-top: 25px;
+    color: #000;
+    -webkit-line-clamp: 2;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item p {
+    color: #878787;
+    font-size: 14px;
+    margin-top: 14px;
+    height: 8.9em;
+    -webkit-line-clamp: 6;
+}
+
+.hooper, .hooper * {
+    box-sizing: border-box;
+}
+
+.hooper {
+    position: relative;
+    width: 100%;
+}
+
+.hooper-list {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.hooper-track {
+    /* transform: translate(-307px, 0px); */
+    display: flex;
+    box-sizing: border-box;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item {
+    padding: 30px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.press-section__item:nth-child(2n) {
+    background-color: #fff;
+}
+
+.c-press-wrapper .c-press-content-wrapper .c-press-items .c-press-item a {
+    text-decoration: none;
+}
+
+.hooper-pagination {
+    display: none!important;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    padding: 5px 10px;
+}
+
+.hooper-slide {
+    flex-shrink: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hooper-indicators {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.hooper-indicator.is-active, .hooper-indicator:hover {
+    background-color: #4285f4;
+}
+
+.hooper-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 .footer {
     position: relative;
     padding: 120px 0;
@@ -839,38 +1048,58 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     max-width: 100%;
     display: block;
 }
-/*
-.hero__nft:hover {
-    transition: all 1.5s;
-    transform: scale(120%) rotate(50deg);
-}
-
-#nft-3 > div > img:hover {
-    transition: all 1.5s;
-    transform: scale(120%) rotate(-50deg);
-}
-
-#nft-4 > div > img:hover {
-    transition: all 1.5s;
-    transform: scale(120%) rotate(-50deg);
-} */
 
 .hero__kinesis-container:hover .hero__nft {
     transition: all 1.5s;
     transform: rotate(35deg);
 }
 
-.hero__kinesis-container:hover #nft-2 > div > img {
+.hero__kinesis-container:hover #nft-2 > a > img {
     transition: all 1.5s;
     transform: scale(120%);
 }
 
-.hero__kinesis-container:hover #nft-3 > div > img {
+.hero__kinesis-container:hover #nft-3 > a > img {
     transition: all 1.5s;
     transform: rotate(-35deg);
 }
 
-.hero__kinesis-container:hover #nft-4 > div > img {
+.hero__kinesis-container:hover #nft-4 > a > img {
     transition: all 1.5s;
     transform: translateY(-10%);
+}
+
+.modal {
+    display: none;
+
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* display: grid; */
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    background: rgba(0,0,0,.7);
+}
+
+.modal__inner {
+    position: relative;
+    background: #fff;
+    padding: 48px;
+    border-radius: 10px;
+    width: 80vw;
+}
+
+.modal__close {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 0;
+    display: flex;
 }
