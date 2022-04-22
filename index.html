@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envoy • Add fuel your collectibles</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -19,10 +20,46 @@
             </a>
             <nav class="header-navigation">
                 <div class="header-link learn-link">
-                    <span class="header-link-title">Learn</span>
+                    <div class="header-link-title">Learn</div>
+                    <div class="learn-menu-card learn-menu">
+                        <ul>
+                            <a href="/" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-portal.svg" alt="Portal"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Collector Portal</h4>
+                                    <p class="learn-menu-item-description">Our product for showcasing NFT's</p>
+                                </div>
+                            </a> 
+
+                            <a href="/company" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-company.svg" alt="Company"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Company</h4>
+                                    <p class="learn-menu-item-description">Learn more about who we are</p>
+                                </div>
+                            </a> 
+
+                            
+                            <a href="https://docs.envoy.art/" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-knowledge.svg" alt="Knowledge"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Knowledge Base</h4>
+                                    <p class="learn-menu-item-description">View our docs on GitBook</p>
+                                </div>
+                            </a> 
+
+                            <a href="https://medium.com/envoynetwork" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-medium.svg" alt="Medium"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Medium</h4>
+                                    <p class="learn-menu-item-description">Read our articles on Medium</p>
+                                </div>
+                            </a> 
+                        </ul>
+                    </div>
                 </div>
                 <div class="header-link community-link">
-                    <span class="header-link-title">Community</span>
+                    <div class="header-link-title">Community</div>
 
                 </div>
             </nav>
@@ -32,7 +69,18 @@
     <main class="home">
         <div class="hero-wrp">
             <h1 class="hero-title">Your favourite NFTs in one profile</h1>
-            <p class="hero-subtitle">Connect your wallets and marketplaces to start earning ENV while engaging with the community. Cross-chain and all in one go.</p>
+            <p class="hero-subtitle">
+                Connect your wallets and marketplaces to start earning ENV while engaging with the community. Cross-chain and all in one go.
+                <a href="/statement" class="hero-cta">Official Statement</a>
+            </p>
+            <a href="#" class="rotating-feed">
+                <div class="rotating-feed-wrapper">
+                    <img src="/img/rotating-feed-user.png" alt="user" class="rotating-feed-icon">
+                    <strong>Cubeson</strong>
+                    <span>&nbsp;reserved by</span>
+                    <strong>&nbsp;0x51...b24</strong>
+                </div>
+            </a>
             <div class="hero-phone-wrapper">
                 <img src="https://raw.githubusercontent.com/tema-front/envoy/main/img/phone-wrapper.webp" alt="phone">
             </div>

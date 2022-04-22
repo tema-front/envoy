@@ -58,11 +58,12 @@ body {
     width: 100%;
 }
 
-.header-link-title {
+.header-link {
     text-decoration: none;
     color: #000;
     font-size: 14px;
     cursor: pointer;
+    position: relative;
 }
 
 .header-connect-btn {
@@ -85,6 +86,123 @@ body {
     box-shadow: 0 2px 3px rgb(19 52 77 / 15%);
 }
 
+.header .learn-menu {
+    display: none;
+}
+
+.header-link-title:hover ~ .learn-menu {
+    display: block;
+}
+
+.learn-menu:hover {
+    display: block;
+}
+
+.learn-menu-card {
+    background: #fff;
+    box-shadow: 0 24px 47px rgb(95 95 95 / 25%), 0 6.48902px 20.7143px rgb(95 95 95 / 2%), 0 0.941701px 3.85757px rgb(95 95 95 / 1%);
+    border-radius: 20px;
+    position: absolute;
+    width: 340px;
+    z-index: 9999;
+    left: -20px;
+}
+
+.learn-menu-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+}
+
+.learn-menu-card .learn-menu-item {
+    text-decoration: none;
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color .2s;
+}
+
+.learn-menu-card .learn-menu-item-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.learn-menu-item:nth-child(1) > .learn-menu-item-icon {
+    background: #3db9ff;
+}
+
+.learn-menu-item:nth-child(2) > .learn-menu-item-icon {
+    background: #ffaf52;
+}
+
+.learn-menu-item:nth-child(3) > .learn-menu-item-icon {
+    background-color: #fe6060;
+}
+
+.learn-menu-item:nth-child(4) > .learn-menu-item-icon {
+    background-color: #0d0d0d;
+}
+
+.learn-menu-card .learn-menu-item-info {
+    text-align: left;
+    margin-left: 12px;
+}
+
+.learn-menu-card .learn-menu-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.learn-menu-card .learn-menu-item-description {
+    color: #bababa;
+    font-size: 12px;
+}
+
+.rotating-feed {
+    display: block;
+    position: relative;
+    z-index: 1;
+    line-height: 24px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+    min-height: 45px;
+    color: #000;
+}
+
+.rotating-feed strong {
+    font-weight: bolder;
+}
+
+.rotating-feed strong:first-of-type {
+    text-decoration: underline;
+    display: inline-block;
+}
+
+
+
+.rotating-feed-wrapper {
+    position: absolute;
+    background: rgba(0,0,0,.05);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.rotating-feed-icon {
+    width: 24px;
+    margin-right: 12px;
+}
 
 .home {
     background-image: url(../img/header-gradient.svg), url(../img/header-gradient-background.svg);
@@ -114,6 +232,33 @@ body {
     margin: 0 auto 180px;
     margin-bottom: 135px;
     text-align: center;
+    position: relative;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    margin: 0 auto;
+    padding: 20px 28px;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    transition: background-color .15s;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -90px;
+}
+
+.hero-cta:hover {
+    background-color: #686868;
 }
 
 .hero-phone-wrapper {
