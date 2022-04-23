@@ -17,34 +17,141 @@
         <div class="header-overlay"></div>
         <div class="header-inner">
             <button class="header-mobile-menu-btn"><span class="header-mobile-menu-btn-line"></span></button>
-            <div class="mobile-menu">
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="header-mobile-menu-btn opened"><span class="header-mobile-menu-btn-line opened"></span></button>
                 <ul class="mobile-menu-list">
-                    <li class="mobile-menu-list-item">
-                        <button class="mobile-menu-list-item-btn">Learn
+
+                    <input type="checkbox" id="mobile-menu-learn" class="menu-list-item-checkbox">
+                    <label for="mobile-menu-learn">
+                        <li class="menu-list-item mobile-menu-list-item-btn">
+                            Learn
                             <img src="/img/mobile-menu-arrow.svg">
-                        </button>
-                    </li>
-                    <li class="mobile-menu-list-item">
-                        <button class="mobile-menu-list-item-btn">Community
+                        </li>
+                    </label>
+
+                    <div class="learn-menu-card learn-menu">
+                        <ul>
+                            <a href="/" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-portal.svg" alt="Portal"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Collector Portal</h4>
+                                    <p class="learn-menu-item-description">Our product for showcasing NFT's</p>
+                                </div>
+                            </a> 
+
+                            <a href="/company" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-company.svg" alt="Company"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Company</h4>
+                                    <p class="learn-menu-item-description">Learn more about who we are</p>
+                                </div>
+                            </a> 
+
+                            <a href="https://docs.envoy.art/" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-knowledge.svg" alt="Knowledge"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Knowledge Base</h4>
+                                    <p class="learn-menu-item-description">View our docs on GitBook</p>
+                                </div>
+                            </a> 
+
+                            <a href="https://medium.com/envoynetwork" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon"><img src="/img/learn-medium.svg" alt="Medium"></div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Medium</h4>
+                                    <p class="learn-menu-item-description">Read our articles on Medium</p>
+                                </div>
+                            </a> 
+                        </ul>
+                    </div>
+
+
+
+                    <input type="checkbox" id="mobile-menu-community" class="menu-list-item-checkbox">
+                    <label for="mobile-menu-community">
+                        <li class="menu-list-item mobile-menu-list-item-btn">
+                            Community
                             <img src="/img/mobile-menu-arrow.svg">
-                        </button>
-                    </li>
+                        </li>
+                    </label>
+
+                    <div class="community-menu-card community-menu">
+                        <ul>
+                            <a href="https://discord.com/invite/envoy" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.0377 6.91205C16.3213 4.45048 15.5133 3.1786 15.5003 3.15579C15.4542 3.09957 14.3125 1.73326 11.5607 0.722656L11.1971 1.71266C12.5062 2.19345 13.435 2.78 13.9457 3.15898C12.4208 2.70361 10.6067 2.42471 9 2.42471C7.39329 2.42471 5.57919 2.70361 4.05425 3.15898C4.565 2.78004 5.49376 2.19345 6.80288 1.71266L6.43925 0.722656C3.68754 1.73326 2.5458 3.09957 2.49975 3.15579C2.48671 3.1786 1.67871 4.45048 0.962297 6.91205C0.271828 9.28426 0.00952734 12.6307 0 12.7649C0.0615234 12.8611 1.47656 15.2771 5.33296 15.2771L6.31044 13.8616C5.21532 13.5708 4.17108 13.1019 3.21518 12.4656L3.79958 11.5877C5.34171 12.6141 7.13999 13.1567 9 13.1567C10.86 13.1567 12.6583 12.6141 14.2004 11.5877L14.7848 12.4656C13.829 13.1019 12.7847 13.5708 11.6896 13.8616L12.667 15.2771C16.5234 15.2771 17.9385 12.8611 18 12.7649C17.9905 12.6307 17.7282 9.28426 17.0377 6.91205ZM6.56163 9.67119H5.50695V7.91337H6.56163V9.67119ZM12.4931 9.67119H11.4384V7.91337H12.4931V9.67119Z" fill="black"></path></svg>
+                                </div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Discord</h4>
+                                    <p class="learn-menu-item-description">Join our community on Discord</p>
+                                </div>
+                            </a> 
+
+                            <a href="https://twitter.com/envoynetwork" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon">
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.1497 4.33381C16.1611 4.4937 16.1611 4.65363 16.1611 4.81352C16.1611 9.69039 12.4492 15.3097 5.66497 15.3097C3.57486 15.3097 1.63325 14.7043 0 13.6536C0.296965 13.6879 0.582469 13.6993 0.890859 13.6993C2.61545 13.6993 4.20303 13.1168 5.4708 12.1232C3.84898 12.0889 2.48984 11.0267 2.02155 9.56478C2.25 9.59902 2.47841 9.62187 2.71828 9.62187C3.04949 9.62187 3.38073 9.57617 3.68909 9.49626C1.99874 9.15359 0.730934 7.66884 0.730934 5.8757V5.83003C1.22203 6.10414 1.79314 6.27546 2.39843 6.29827C1.40477 5.63582 0.753785 4.50513 0.753785 3.22593C0.753785 2.54067 0.936492 1.9125 1.25631 1.36427C3.0723 3.60284 5.80201 5.06475 8.86289 5.22467C8.8058 4.95056 8.77152 4.66505 8.77152 4.37952C8.77152 2.3465 10.4162 0.69043 12.4606 0.69043C13.5228 0.69043 14.4822 1.13586 15.156 1.8554C15.9898 1.69551 16.7893 1.38712 17.4974 0.964543C17.2233 1.82116 16.6408 2.5407 15.8756 2.99752C16.618 2.91761 17.3375 2.71198 17.9999 2.42648C17.4975 3.15741 16.8693 3.8084 16.1497 4.33381Z" fill="black"></path></svg>
+                                </div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Twitter</h4>
+                                    <p class="learn-menu-item-description">Join our community on Twitter</p>
+                                </div>
+                            </a> 
+
+                            
+                            <a href="https://t.me/envoynetwork" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon">
+                                    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.28863 6.96817L13.7968 2.21894C15.0315 1.72427 19.2189 0.141239 19.2189 0.141239C19.2189 0.141239 21.1516 -0.551282 20.9905 1.1306C20.9367 1.82312 20.5075 4.2473 20.0778 6.86903L18.7359 14.6358C18.7359 14.6358 18.6284 15.7737 17.7143 15.9715C16.8001 16.1694 15.2985 15.279 15.0303 15.081C14.8156 14.9327 11.004 12.7065 9.60817 11.6181C9.23236 11.3214 8.80298 10.7276 9.66188 10.0351C11.5945 8.40256 13.903 6.37421 15.2985 5.08802C15.9428 4.49435 16.587 3.10916 13.9028 4.79133L6.33354 9.49106C6.33354 9.49106 5.47448 9.98573 3.8641 9.54055C2.25371 9.09537 0.374773 8.5017 0.374773 8.5017C0.374773 8.5017 -0.913659 7.75968 1.28739 6.96831L1.28863 6.96817Z" fill="black"></path></svg>
+                                </div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Telegram</h4>
+                                    <p class="learn-menu-item-description">Join our community on Telegram</p>
+                                </div>
+                            </a> 
+
+                            <a href="https://www.instagram.com/envoynetwork" aria-current="page" class="learn-menu-item">
+                                <div class="learn-menu-item-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.702 0.048C5.55533 0.01 5.82667 0 8 0C10.1733 0 10.4447 0.008 11.298 0.048C12.1493 0.0873333 12.73 0.222 13.24 0.42C13.7673 0.623333 14.2127 0.898 14.6573 1.34267C15.1013 1.78733 15.376 2.234 15.58 2.76C15.7773 3.26933 15.912 3.85067 15.952 4.702C15.99 5.55533 16 5.82667 16 8C16 10.1733 15.992 10.4447 15.952 11.298C15.9127 12.1493 15.7773 12.73 15.58 13.24C15.3767 13.7673 15.1013 14.2127 14.6573 14.6573C14.2127 15.1013 13.7653 15.376 13.24 15.58C12.73 15.7773 12.1493 15.912 11.298 15.952C10.4447 15.99 10.1733 16 8 16C5.82667 16 5.55533 15.992 4.702 15.952C3.85067 15.9127 3.27067 15.7773 2.76 15.58C2.23333 15.3767 1.78733 15.1013 1.34267 14.6573C0.898 14.2127 0.624 13.7653 0.42 13.24C0.222 12.73 0.088 12.1493 0.048 11.298C0.01 10.4447 0 10.1733 0 8C0 5.82667 0.008 5.55533 0.048 4.702C0.0873333 3.85 0.222 3.27 0.42 2.76C0.623333 2.23333 0.898 1.78733 1.34267 1.34267C1.78733 0.898 2.234 0.624 2.76 0.42C3.27 0.222 3.85 0.088 4.702 0.048ZM12.2707 4.69C12.8 4.69 13.2307 4.26 13.2307 3.73C13.2307 3.20067 12.7993 2.77 12.2707 2.77067C11.7413 2.77067 11.3107 3.20067 11.3107 3.73C11.3107 4.25933 11.7407 4.69 12.2707 4.69ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" fill="black"></path></svg>
+                                </div>
+                                <div class="learn-menu-item-info">
+                                    <h4 class="learn-menu-item-title">Instagram</h4>
+                                    <p class="learn-menu-item-description">Join our community on Instagram</p>
+                                </div>
+                            </a> 
+                        </ul>
+                    </div>
+
                     <li class="mobile-menu-list-item">
                         <button class="mobile-menu-list-item-btn disabled"><span>Metaverse<sup>Soon</sup></span>
                             <img src="/img/mobile-menu-arrow.svg">
                         </button>
                     </li>
-                    <li class="mobile-menu-list-item">
-                        <button class="mobile-menu-list-item-btn">Get ENV
+
+                    <input type="checkbox" id="mobile-menu-ENV" class="menu-list-item-checkbox">
+                    <label for="mobile-menu-ENV">
+                        <li class="menu-list-item mobile-menu-list-item-btn">
+                            Get ENV
                             <img src="/img/mobile-menu-arrow.svg">
-                        </button>
-                    </li>
+                        </li>
+                    </label>
+
+                    <div class="mobile-menu-ENV-list">
+                        <a href="https://pancakeswap.finance/info/token/0x4d6b129db8a502b85fedc3443fa4f58b50327238" target="_blank" rel="noopener noreferrer">
+                            PancakeSwap
+                        </a>
+                        <a href="https://gate.io/trade/ENV_USDT" target="_blank" rel="noopener noreferrer">
+                            Gate.io
+                        </a>
+                    </div>
+
                 </ul>
+
                 <div class="mobile-menu-connect-wallet-wrp">
                     <button class="mobile-menu-connect-wallet-btn">
                         <span>Connect wallet</span>
                     </button>
                 </div>
+
+
             </div>
 
             <a href="/" class="header-logo">
@@ -362,7 +469,7 @@
                     </div>
                 </div>
             </section>
-            <div data-fetch-key="0" class="c-press-wrapper press-section" data-v-42ae13ba=""><div class="c-press-content-wrapper e_layout"><div class="c-press-content"><h2 class="press-section__heading">Press about us</h2> <div class="c-press-button-collection"><button class="press-section__button press-section__button--inactive"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 6L2 6M2 6L7 1M2 6L7 11" stroke="black" stroke-width="1.5"></path></svg></button> <button class="press-section__button"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-2.18557e-07 6L14 6M14 6L9 1M14 6L9 11" stroke="black" stroke-width="1.5"></path></svg></button></div></div> <div class="c-press-items"><section tabindex="0" class="hooper" style="height: 100%;"><div class="hooper-list"><ul class="hooper-track" style="transform: translate(0px, 0px);"><li class="c-press-item press-section__item hooper-slide is-active is-current" ><a href="https://variety.com/2021/digital/news/dino-warriors-nft-dimitri-vegas-marvel-1235052225/" target="_blank"><img src="https://website-api.envoy.art//uploads/variety_f5bcc86042.png" class="c-press-image"> <h3>Comic-Inspired NFT Dino Warriors Boasts Marvel Creative and Dimitri Vegas’ Backing</h3> <p>
+            <div data-fetch-key="0" class="c-press-wrapper press-section" data-v-42ae13ba=""><div class="c-press-content-wrapper e_layout"><div class="c-press-content"><h2 class="press-section__heading">Press about us</h2> </div> <div class="c-press-items"><section tabindex="0" class="hooper" style="height: 100%;"><div class="hooper-list"><ul class="hooper-track" style="transform: translate(0px, 0px);"><li class="c-press-item press-section__item hooper-slide is-active is-current" ><a href="https://variety.com/2021/digital/news/dino-warriors-nft-dimitri-vegas-marvel-1235052225/" target="_blank"><img src="https://website-api.envoy.art//uploads/variety_f5bcc86042.png" class="c-press-image"> <h3>Comic-Inspired NFT Dino Warriors Boasts Marvel Creative and Dimitri Vegas’ Backing</h3> <p>
                 Dimitri Thivaios, of chart-topping EDM duo, Dimiti Vegas and Like Mike, has teamed up with Michael Uslan, executive producer of the “Batman” extended universe...
               </p></a></li><li class="c-press-item press-section__item hooper-slide is-active" ><a href="https://u.today/envoy-network-nft-project-secures-25-million-in-funding-to-make-digital-collectibles-mainstream" target="_blank"><img src="https://website-api.envoy.art//uploads/utoday_ba4b313b8e.png" class="c-press-image"> <h3>ENVOY Network NFT Project Secures $2.5 Million in Funding to Make Digital Collectibles Mainstream</h3> <p>
                 ENVOY Network has addressed the development of an "out-of-the-box" ecosystem of digital collectibles (non-fungible tokens, NFTs). With the fresh funding, it is going to unveil a number of cutting-edge solutions in this segment.

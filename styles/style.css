@@ -102,7 +102,7 @@ button {
     color: #686868;
 }
 
-.header .learn-menu {
+.header .learn-menu, .header .community-menu {
     display: none;
 }
 
@@ -134,6 +134,39 @@ button {
     align-self: center;
     padding: 0;
     transition: background-color .2s;
+}
+
+.header-mobile-menu-btn.opened {
+    position: absolute;
+    background-color: #fbfbfb;
+    top: 14px;
+    left: 15px;
+    z-index: 1;
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0;
+    transition: background-color .2s;
+}
+
+.header-mobile-menu-btn.opened  .header-mobile-menu-btn-line  {
+    transform: rotate(-45deg);
+}
+
+.header-mobile-menu-btn.opened  .header-mobile-menu-btn-line::before {
+    opacity: 0;
+}
+
+.header-mobile-menu-btn.opened  .header-mobile-menu-btn-line::after {
+    transform: translate(0) rotate(90deg);
+}
+
+.header-mobile-menu-btn:focus ~ .mobile-menu{
+    display: block;
 }
 
 .header-mobile-menu-btn-line, .header-mobile-menu-btn-line:after, .header-mobile-menu-btn-line:before {
@@ -246,11 +279,54 @@ button {
     color: #686868;
 }
 
+.mobile-menu-ENV-list {
+    display: none;
+}
+
+.mobile-menu-ENV-list a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+}
+
+.menu-list-item-checkbox {
+    display: none;
+}
+
+.menu-list-item-checkbox:first-child:checked ~ .learn-menu-card {
+    display: block;
+}
+
+.menu-list-item-checkbox:nth-child(4):checked ~ .community-menu-card {
+    display: block;
+}
+
+.menu-list-item-checkbox:nth-child(8):checked ~ .mobile-menu-ENV-list {
+    display: block;
+}
+
+.mobile-menu .community-menu-card, .mobile-menu .mobile-menu-list .learn-menu-card {
+    position: static;
+    box-shadow: none;
+}
+
+.mobile-menu .community-menu-card ul, .mobile-menu .mobile-menu-list .learn-menu-card ul {
+    padding: 0;
+}
+
+.mobile-menu .community-menu-card .community-menu-item, 
+.mobile-menu .community-menu-card .learn-menu-item, 
+.mobile-menu .mobile-menu-list .learn-menu-card .community-menu-item, 
+.mobile-menu .mobile-menu-list .learn-menu-card .learn-menu-item {
+    padding: 4px 0;
+}
+
 .learn-menu:hover {
     display: block;
 }
 
-.learn-menu-card {
+.learn-menu-card, .community-menu-card {
     background: #fff;
     box-shadow: 0 24px 47px rgb(95 95 95 / 25%), 0 6.48902px 20.7143px rgb(95 95 95 / 2%), 0 0.941701px 3.85757px rgb(95 95 95 / 1%);
     border-radius: 20px;
@@ -260,13 +336,13 @@ button {
     left: -20px;
 }
 
-.learn-menu-card ul {
+.learn-menu-card ul, .community-menu-card ul {
     list-style: none;
     margin: 0;
     padding: 12px;
 }
 
-.learn-menu-card .learn-menu-item {
+.learn-menu-card .learn-menu-item, .community-menu-card .learn-menu-item{
     text-decoration: none;
     display: flex;
     padding: 8px;
@@ -275,7 +351,7 @@ button {
     transition: background-color .2s;
 }
 
-.learn-menu-card .learn-menu-item-icon {
+.learn-menu-card .learn-menu-item-icon, .community-menu-card .learn-menu-item-icon{
     width: 50px;
     height: 50px;
     border-radius: 14px;
@@ -283,19 +359,19 @@ button {
     align-items: center;
     justify-content: center; 
 }
-.learn-menu-item:nth-child(1) > .learn-menu-item-icon {
+.learn-menu-card .learn-menu-item:nth-child(1) > .learn-menu-item-icon {
     background: #3db9ff;
 }
 
-.learn-menu-item:nth-child(2) > .learn-menu-item-icon {
+.learn-menu-card .learn-menu-item:nth-child(2) > .learn-menu-item-icon {
     background: #ffaf52;
 }
 
-.learn-menu-item:nth-child(3) > .learn-menu-item-icon {
+.learn-menu-card .learn-menu-item:nth-child(3) > .learn-menu-item-icon {
     background-color: #fe6060;
 }
 
-.learn-menu-item:nth-child(4) > .learn-menu-item-icon {
+.learn-menu-card .learn-menu-item:nth-child(4) > .learn-menu-item-icon {
     background-color: #0d0d0d;
 }
 
@@ -317,12 +393,12 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     border-radius: 18px;
 }
 
-.learn-menu-card .learn-menu-item-info {
+.learn-menu-card .learn-menu-item-info, .community-menu-card .learn-menu-item-info {
     text-align: left;
     margin-left: 12px;
 }
 
-.learn-menu-card .learn-menu-item-title {
+.learn-menu-card .learn-menu-item-title, .community-menu-card .learn-menu-item-title {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.1;
@@ -330,7 +406,7 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     color: #000;
 }
 
-.learn-menu-card .learn-menu-item-description {
+.learn-menu-card .learn-menu-item-description, .community-menu-card .learn-menu-item-description {
     color: #bababa;
     font-size: 12px;
 }
@@ -1481,28 +1557,58 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     }
 
     .social-media-btn-wrapper:first-child {
-        width: auto;
-        height: 72px;
+        /* width: auto;
+        height: 72px; */
+
+        max-width: 72px;
+        width: 52vw;
+        max-height: 72px;
+        min-width: auto;
+        height: 17vw;
     }
 
     .social-media-btn-wrapper:nth-child(2) {
-        width: auto;
-        height: 84px;
+        /* width: auto;
+        height: 84px; */
+
+        max-width: 84px;
+        width: 64vw;
+        max-height: 84px;
+        min-width: auto;
+        height: 21vw;
     }
 
     .social-media-btn-wrapper:nth-child(3) {
-        width: auto;
-        height: 94px;
+        /* width: auto;
+        height: 94px; */
+
+        max-width: 94px;
+        width: 70vw;
+        max-height: 94px;
+        min-width: auto;
+        height: 24vw;
     }
 
     .social-media-btn-wrapper:nth-child(4) {
-        width: auto;
-        height: 84px;
+        /* width: auto;
+        height: 84px; */
+
+        max-width: 84px;
+        width: 64vw;
+        max-height: 84px;
+        min-width: auto;
+        height: 21vw;
     }
 
     .social-media-btn-wrapper:nth-child(5) {
-        width: auto;
-        height: 72px;
+        /* width: auto;
+        height: 72px; */
+
+        max-width: 72px;
+        width: 52vw;
+        max-height: 72px;
+        min-width: auto;
+        height: 17vw;
     }
 
     .social-media-btn {
