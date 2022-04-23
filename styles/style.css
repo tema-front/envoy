@@ -612,9 +612,9 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     background-color: #686868;
 }
 
-.about-button:focus ~ .modal {
+/* .about-button:focus ~ .modal {
     display: grid;
-}
+} */
 
 .about-button img {
     margin-right: 10px;
