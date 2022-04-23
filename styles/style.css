@@ -29,6 +29,10 @@ img, picture {
     display: block;
 }
 
+button {
+    font: inherit;
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -146,6 +150,7 @@ img, picture {
     transition: opacity .1s;
     transform: translateY(4px);
 }
+
 .header-mobile-menu-btn-line:after, .header-mobile-menu-btn-line:before {
     content: "";
     position: absolute;
@@ -154,9 +159,91 @@ img, picture {
 .header-mobile-menu-btn-line:after {
     transform: translateY(-4px);
 }
+
 .header-mobile-menu-btn-line:after, .header-mobile-menu-btn-line:before {
     content: "";
     position: absolute;
+}
+
+.header-overlay {
+    display: none;
+    position: absolute;
+    background: #000;
+    opacity: .8;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mobile-menu {
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 82px 15px 40px;
+    z-index: 1;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 56vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mobile-menu-list-item-btn {
+    padding: 12px 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+    font-size: 14px;
+}
+
+.mobile-menu-list-item-btn.disabled {
+    color: rgba(0,0,0,.27);
+}
+
+.mobile-menu .mobile-menu-connect-wallet-wrp {
+    justify-content: space-between;
+}
+
+.mobile-menu-connect-wallet-wrp {
+    display: flex;
+    align-self: center;
+}
+
+.mobile-menu .mobile-menu-connect-wallet-btn {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mobile-menu-connect-wallet-btn {
+    font-size: 14px;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.mobile-menu-connect-wallet-btn {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    transition: box-shadow .2s,color .2s;
+    box-shadow: 0 2px 3px rgb(19 52 77 / 15%);
+}
+
+.mobile-menu-connect-wallet-btn:hover {
+    box-shadow: 0 4px 7px rgb(0 0 0 / 10%);
+    color: #686868;
 }
 
 .learn-menu:hover {
@@ -704,7 +791,6 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     right: -40px;
     width: 148px;
     height: 148px;
-    min-width: 72px;
     border-color: rgba(0,0,0,.15);
     min-width: 72px;
 }
