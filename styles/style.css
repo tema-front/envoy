@@ -454,11 +454,13 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
 
 
 .rotating-feed-wrapper {
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
     position: absolute;
     background: rgba(0,0,0,.05);
     left: 50%;
     transform: translateX(-50%);
-    display: inline-flex;
     align-items: center;
     white-space: nowrap;
     border-radius: 5px;
@@ -1280,24 +1282,24 @@ div.header-link.community-link > div.learn-menu-card.learn-menu > ul > a > div.l
     display: block;
 }
 
+.hero__kinesis-container .hero__nft {
+    transition: all 2.0s;
+}
+
 .hero__kinesis-container:hover .hero__nft {
-    transition: all 1.5s;
-    transform: rotate(35deg);
+    transform: rotate(20deg);
 }
 
 .hero__kinesis-container:hover #nft-2 > a > img {
-    transition: all 1.5s;
-    transform: scale(120%);
+    transform: scale(110%);
 }
 
 .hero__kinesis-container:hover #nft-3 > a > img {
-    transition: all 1.5s;
-    transform: rotate(-35deg);
+    transform: rotate(-20deg);
 }
 
 .hero__kinesis-container:hover #nft-4 > a > img {
-    transition: all 1.5s;
-    transform: translateY(-10%);
+    transform: translateY(-5%);
 }
 
 .modal {
